@@ -2,19 +2,21 @@ package Queues;
 
 public class Main {
     public static void main(String[] args) {
+        // Make a shelter que with a size of 5:
         AnimalShelter shelter = new AnimalShelter(5);
-
+        // Testing enqueue:
         shelter.enqueue("dog");
         shelter.enqueue("cat");
         shelter.enqueue("dog");
         shelter.enqueue("cat");
         shelter.enqueue("dog");
-
+        // Testing deque:
         System.out.println("Dequeuing any: " + shelter.dequeueAny());
         System.out.println("Dequeuing dog: " + shelter.dequeueDog());
         System.out.println("Dequeuing cat: " + shelter.dequeueCat());
         System.out.println("Dequeuing any: " + shelter.dequeueAny());
         System.out.println("Dequeuing any: " + shelter.dequeueAny());
+        // Testing deque on an empty queue:
         System.out.println("Dequeuing any: " + shelter.dequeueAny());
     }
 }
